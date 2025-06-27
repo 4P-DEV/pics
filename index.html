@@ -3,7 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4P - Modern Gallery</title>
+    <title>4P</title>
+    <meta name="description" content="Meet 4P, a team of talented computing science students, developers, and software engineers from Simon Fraser University (SFU). Explore our portfolio and connect with Pratham Garg, Krish Bedi, Gourav Sharma, and Ruben Dua.">
+    <meta name="keywords" content="4P, 4P SFU, SFU Computing Science, Simon Fraser University, student developers, software engineers, Pratham Garg, Krish Bedi, Gourav Sharma, Ruben Dua, Burnaby, Vancouver, tech students, CMPT, software engineering projects">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "4P",
+      "description": "A team of computing science students, developers, and software engineers from Simon Fraser University.",
+      "url": "https://www.4-p.pics",
+      "member": [
+        {
+          "@type": "Person",
+          "name": "Pratham Garg",
+          "jobTitle": "Computing Science Student and Developer",
+          "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "Simon Fraser University"
+          },
+          "image": "./pratham.jpg"
+        },
+        {
+          "@type": "Person",
+          "name": "Krish Bedi",
+          "jobTitle": "Software Engineer in Training",
+          "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "Simon Fraser University"
+          },
+          "image": "./krish.jpg"
+        },
+        {
+          "@type": "Person",
+          "name": "Gourav Sharma",
+          "jobTitle": "Aspiring Software Engineer",
+          "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "Simon Fraser University"
+          },
+          "image": "./gourav.jpg"
+        },
+        {
+          "@type": "Person",
+          "name": "Ruben Dua",
+          "jobTitle": "Team Leader and Computing Science Developer",
+          "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "Simon Fraser University"
+          },
+          "image": "./ruben.jpg"
+        }
+      ],
+      "knowsAbout": ["Software Development", "Computing Science", "Simon Fraser University", "Web Development", "Student Projects"]
+    }
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -16,6 +72,7 @@
             background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
             min-height: 100vh;
             overflow-x: hidden;
+            color: #e5e7eb;
         }
 
         .container {
@@ -24,7 +81,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            padding: 2rem;
+            padding: 4rem 2rem;
             position: relative;
         }
 
@@ -76,11 +133,11 @@
         }
 
         .title {
-            font-size: clamp(3.5rem, 10vw, 7rem);
+            font-size: clamp(3rem, 8vw, 6rem);
             font-weight: 900;
             color: white;
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 1rem;
             letter-spacing: -0.02em;
             background: linear-gradient(45deg, #ffffff, #a3a3a3, #6b7280);
             -webkit-background-clip: text;
@@ -88,6 +145,15 @@
             background-clip: text;
             animation: titleGlow 3s ease-in-out infinite alternate;
             position: relative;
+            z-index: 2;
+        }
+        
+        h2.subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 500;
+            color: #a3a3a3;
+            text-align: center;
+            margin-bottom: 3rem;
             z-index: 2;
         }
 
@@ -151,15 +217,14 @@
             justify-content: center;
             font-size: 4rem;
             margin-bottom: 1rem;
-            /* Added this to make sure image inside also fits correctly */
             overflow: hidden; 
         }
 
         .person-image img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* This makes the image cover the area without distortion */
-            border-radius: 16px; /* Maintain border radius from parent */
+            object-fit: cover;
+            border-radius: 16px;
         }
 
         .person-card:hover .person-image {
@@ -216,6 +281,35 @@
                 transform: translateY(0);
             }
         }
+        
+        .team-description {
+            color: #e5e7eb;
+            max-width: 800px;
+            margin: 4rem auto 0 auto;
+            text-align: center;
+            z-index: 2;
+            background: rgba(30, 30, 50, 0.2);
+            padding: 2rem;
+            border-radius: 24px;
+            border: 1px solid rgba(100, 100, 100, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        
+        .team-description h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ffffff, #a3a3a3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .team-description p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            opacity: 0.9;
+        }
 
         @media (max-width: 768px) {
             .gallery {
@@ -238,12 +332,13 @@
         </div>
         
         <h1 class="title">4P</h1>
+        <!-- <h2 class="subtitle">A Showcase of SFU Computing Science Developers</h2> -->
         
         <div class="gallery">
             <div class="person-card">
                 <div class="person-image">
                     <div class="pulse-ring"></div>
-                    <img src="./pratham.jpg" alt="Pratham Garg">
+                    <img src="./pratham.jpg" alt="Pratham Garg - SFU Computing Science Student and Developer">
                 </div>
                 <div class="person-name">Pratham Garg</div>
             </div>
@@ -251,7 +346,7 @@
             <div class="person-card">
                 <div class="person-image">
                     <div class="pulse-ring"></div>
-                    <img src="./krish.jpg" alt="Krish Bedi">
+                    <img src="./krish.jpg" alt="Krish Bedi - SFU Software Engineer in Training">
                 </div>
                 <div class="person-name">Krish Bedi</div>
             </div>
@@ -259,7 +354,7 @@
             <div class="person-card">
                 <div class="person-image">
                     <div class="pulse-ring"></div>
-                    <img src="./gourav.jpg" alt="Gourav Sharma">
+                    <img src="./gourav.jpg" alt="Gourav Sharma - Aspiring Software Engineer at SFU">
                 </div>
                 <div class="person-name">Gourav Sharma</div>
             </div>
@@ -267,11 +362,19 @@
             <div class="person-card">
                 <div class="person-image">
                     <div class="pulse-ring"></div>
-                    <img src="./ruben.jpg" alt="Ruben Dua">
+                    <img src="./ruben.jpg" alt="Ruben Dua - Team Leader and SFU Computing Science Developer">
                 </div>
                 <div class="person-name">Ruben Dua <br>(Team Leader)</div>
             </div>
         </div>
+        
+        <section class="team-description">
+            <h2>About 4P: SFU's Next Generation of Innovators</h2>
+            <p>
+                4P is a dynamic group of four passionate and skilled computing science students from Simon Fraser University in Burnaby, BC. Comprised of Pratham Garg, Krish Bedi, Gourav Sharma, and our team leader, Ruben Dua, we are dedicated to pushing the boundaries of software engineering and development. Our collective expertise spans various areas of computer science, and we are actively seeking opportunities to apply our skills to real-world projects. This gallery showcases our individual talents and our collaborative spirit.
+            </p>
+        </section>
+
     </div>
 
     <script>
@@ -288,11 +391,12 @@
         const cards = document.querySelectorAll('.person-card');
         cards.forEach(card => {
             card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-10px) scale(1.02) rotateY(5deg)';
+                // Simplified transform to prevent potential jitter on some browsers.
+                this.style.transform = 'translateY(-10px) scale(1.02)';
             });
             
             card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1) rotateY(0deg)';
+                this.style.transform = 'translateY(0) scale(1)';
             });
         });
 
@@ -312,14 +416,14 @@
             
             element.animate([
                 { transform: 'translateY(0) rotate(0deg)', opacity: 0 },
-                { transform: 'translateY(-100vh) rotate(360deg)', opacity: 1 }
+                { transform: 'translateY(-110vh) rotate(360deg)', opacity: 1 }
             ], {
-                duration: Math.random() * 3000 + 2000,
+                duration: Math.random() * 3000 + 3000,
                 easing: 'linear'
             }).onfinish = () => element.remove();
         }
 
-        setInterval(createFloatingElement, 2000);
+        setInterval(createFloatingElement, 2500);
     </script>
 </body>
 </html>
